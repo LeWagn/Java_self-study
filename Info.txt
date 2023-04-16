@@ -1,0 +1,17 @@
+Catching up on Java using Morpheus Tutorials 
+(https://www.youtube.com/watch?v=s6i1Ou6R7vk&list=PLNmsVeXQZj7qI9vtiiU5bJBfbxqBailVM&index=42)
+
+Goal is to Programming a small tic tac toe project using most of the
+essential Java concepts.
+
+Advice: 
+- Study and practice arrays more times to get the hang of it. 
+- Learn Classes more in depth.
+
+Nicht im Projekt: Vererbung.
+"public class Player extends Klasse 2" - Vererbung. 
+Es gibt keine Mehrfachvererbung! Das gibt es nur bei Interfaces.
+Bsp.: "public class Player implements Inteface1, Interface 2" 
+Multithreading, Generics usw. ebenfalls nicht drin.
+--> In "Java Tutorial Fortgeschrittene Techniken".
+Algorithmen, Bäume in "Java Tutorial - Algorithmen".
