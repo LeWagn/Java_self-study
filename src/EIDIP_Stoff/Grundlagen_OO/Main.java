@@ -10,7 +10,6 @@ public class Main{
 
     //constructor = special method that is called when an object is instantiated (created)
 public static void main(String[] args) {
-    /* 
     Car myCar1 = new Car();
     Car myCar2 = new Car();
     System.out.println(myCar1.make);
@@ -26,7 +25,6 @@ public static void main(String[] args) {
     System.out.println(myCar1.model("Mustang"));
     System.out.println(myCar2.make(b));
     System.out.println(myCar2.model(c));   
-    */ 
 
 
     Human human = new Human("Tom", 25, 80.5);

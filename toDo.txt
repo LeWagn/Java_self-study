@@ -12,10 +12,18 @@ EIDIP_Stoff:
 
 - object passing
 
-- inheritance (Vererbung)
-
 - Schnittstellen
 
-- Abstrake Klassen  (abstraction)
+- Polymorphism
 
-- static 
++ super                             Done!
+
++ inheritance (Vererbung)           Done!           
+
++ Abstrake Klassen  (abstraction)   Done!
+
++ static                            Done!
+
++ Grundlagen_OO                     Done!
+
++ toString                          Done!
