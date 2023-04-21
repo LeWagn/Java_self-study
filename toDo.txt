@@ -12,9 +12,17 @@ EIDIP_Stoff:
 
 - object passing
 
-- Schnittstellen
+- Schnittstellen        -> Other Tutorial
 
-- Polymorphism
+- Polymorphism / dynamic Polymorphism
+
+- Equals                -> Other Tutorial
+
+- Casting               -> Other Tutorial
+
+- InstanceOf            -> Other Tutorial
+
+- Lambda-Expressions    -> Other Tutorial
 
 + super                             Done!
 
@@ -24,6 +32,6 @@ EIDIP_Stoff:
 
 + static                            Done!
 
-+ Grundlagen_OO                     Done!
++ Grundlagen_OO                     Done!       (Objects + Constructors)
 
 + toString                          Done!

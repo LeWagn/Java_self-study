@@ -11,5 +11,6 @@ public class Main {
         Hero mmr = new Hero("Mumen-Rider", 25, "Bicyclist of Justice");
 
         System.out.println(mmr.toString());
+        System.out.println(opm.toString());
     }
 }
