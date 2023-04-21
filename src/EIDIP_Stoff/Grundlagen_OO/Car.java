@@ -25,4 +25,10 @@ public class Car {
         return "Cars Model is " + b;
     }
     
+    public String toString(){
+        /* String myString = make + "\n" + model + "\n" + color + "\n" + year;     
+        return myString;    --> Bloated. Stattdessem:*/
+        return make + "\n" + model + "\n" + color + "\n" + year;
+    }
+    
 }

@@ -1,0 +1,21 @@
+EIDIP_Stoff:
+
+- arrays
+
+- 2d arrays
+
+- array lists
+
+- 2d arrays lists
+
+- array of objects
+
+- object passing
+
+- inheritance (Vererbung)
+
+- Schnittstellen
+
+- Abstrake Klassen  (abstraction)
+
+- static 
