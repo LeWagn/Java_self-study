@@ -15,3 +15,6 @@ Bsp.: "public class Player implements Inteface1, Interface 2"
 Multithreading, Generics usw. ebenfalls nicht drin.
 --> In "Java Tutorial Fortgeschrittene Techniken".
 Algorithmen, Bäume in "Java Tutorial - Algorithmen".
+
+Eidip Folder is using this video:
+https://youtu.be/xk4_1vDrzzo
