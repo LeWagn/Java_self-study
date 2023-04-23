@@ -1,12 +1,12 @@
 EIDIP_Stoff:
 
-- arrays
+- arrays                            Done!
 
-- 2d arrays
+- 2d arrays                         Done!
 
-- array lists
+- array lists                       Done!
 
-- 2d arrays lists
+- 2d arrays lists                   Done!
 
 - array of objects
 
