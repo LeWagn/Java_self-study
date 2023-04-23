@@ -14,7 +14,7 @@ EIDIP_Stoff:
 
 - Schnittstellen (Inteface)         Done!
 
-- (dynamic) Polymorphism    
+- (dynamic) Polymorphism            Done!
 
 - Equals                -> Other Tutorial
 
