@@ -12,9 +12,9 @@ EIDIP_Stoff:
 
 - object passing
 
-- Schnittstellen        -> Other Tutorial
+- Schnittstellen (Inteface)         Done!
 
-- Polymorphism / dynamic Polymorphism
+- (dynamic) Polymorphism    
 
 - Equals                -> Other Tutorial
 
