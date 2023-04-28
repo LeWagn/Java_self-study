@@ -1,0 +1,15 @@
+
+Nachteile von Arrays/Arraylists:
++ Gut für den access von Elementen, da diese Indexe haben.
+- Schlecht für das einfügen oder löschen von Elementen. Da ich dann shiften muss.
+
+Linked Lists:
+letztes Element hat einen Pointer-Wert "null".
+Einfügen: 
+Nehmen Addresse aus der vorherigen Node und zeigen damit auf die nächste Node.
+Die Addresse der vorherigen Node zeigt jetzt auf unser neues Element.
+Löschen:
+Vorherige Node zeigt nun einfach auf die nächste Node, statt auf die zu löschende.
+
+Doubly LinkedLists:
+2 Nodes (eine fürs vorherige Element, eine fürs nächste Element)

@@ -1,0 +1,16 @@
+
+Video TMT:
+Queue: hat 2 Operationen:
+
+FIFO ("Kassenschlange")
+push (können Element vorne einfügen)
+und pop (können das älteste Element rausnehmen)
+
+LIFO ("Stack")
+Das Element, was als letztes eingefügt worden ist, kommt als erstes raus.
+push (Fügen Element als vorderstes Element ein)
+pop (Nehmen vorderstes ELement wieder raus.)
+
+Laufzeit:
+- Zugriff, Suchen O(n)
+- Einfügen, Löschen O(1)
