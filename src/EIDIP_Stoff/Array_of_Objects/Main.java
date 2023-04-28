@@ -4,10 +4,10 @@ public class Main {
     
     public static void main(String[] args) {
         
-        //
-        int[] numbers = new int[3];
-        char[] characters = new char[4];
-        String[] strings = new String[5];
+        //array of other Data-Types:
+        //int[] numbers = new int[3];
+        //char[] characters = new char[4];
+        //String[] strings = new String[5];
 
         Food[] refrigerator = new Food[3];
 

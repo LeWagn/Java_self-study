@@ -8,9 +8,9 @@ EIDIP_Stoff:
 
 - 2d arrays lists                   Done!
 
-- array of objects
+- array of objects                  Done!
 
-- object passing
+- object passing                    Done!
 
 - Schnittstellen (Inteface)         Done!
 
