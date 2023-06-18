@@ -1,0 +1,50 @@
+Theorie:
+Linked Lists are made up of:
+    Head: first node in a linked list
+    Tail: last node in a linked list
+    Pointer: Reference to another node.
+    Node: an object containing data and pointer(s).
+
+   -Singly linked lists hold a reference to the nedxt node.
+    You always maintain a reference to the head to the linked list and a reference to the tail node for quick additions/removals.
+    pros:
+    use less memory, simpler implementation
+    cons:
+    cannot easily access previous elements.
+
+   -Doubly linked lists: each node holds a reference to the next and previous node.
+    You always maintain a reference to the head and the tail of the doubly linked list to do quick additions/removals from both ends of your list.
+    pros:
+    can be traversed backwards.
+    cons:
+    takes 2x memory
+
+    Insertion Implementation:
+    Singly linked list:
+    traverese up to the node thats "before" the node that you want to insert.
+    Create the node that you want to insert. Set it's "next" pointer to the "after" node.
+    Change the "next" pointer of the "before" node to point to the inserted node.
+
+    Doubly linked lists:
+    traverse to the "before" node. create the new node that you want to insert, set its pointer to the "after" node.
+    set the previous pointer to the "before" node.
+    Now set the previous pointer of the "after" node to point to the inserted node.
+    Lastly, make the "before" nodes "next" pointer point to the inserted node.
+
+    Remove Implementation:
+    Singly linked list:
+    create 2 pointers "trav1" and "trav2" to traverse.
+    trav1 points to the head, trav2 points to the head's next node (head.next)
+    Advance trav 2 until we find the node we want ot remove, while also advancing trav 1.
+    create another pointer "temp" for the node that you want to remove once you reach it with trav2. Then keep advancing with trav2 to the next node.
+    Note: trav1 is on the "before" node, "temp" is on the "to-be-deleted" node and trav2 is on the node after the "to-be-deleted" one.
+    Set trav1's next pointer to be equal to trav2.
+    Remove temp.
+    Done.
+
+    Doubly linked list:
+    Only need one traverese pointer, since each node has a reference to the last node.
+    start trav at the head, traverese until the to-be-removed node.
+    set the pointer of the previous Node to point to the next node (e.g. 4, 9, 12 -> we want to remove 9. => 4 now poitns to 12).
+    Set the previous pointer of the next node (here 12) to point to 4.
+    Remove the Node.
