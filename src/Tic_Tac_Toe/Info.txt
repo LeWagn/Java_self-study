@@ -1,4 +1,4 @@
-Catching up on Java using Morpheus Tutorials 
+Catching up on Java using Morpheus Tutorials (among others)
 (https://www.youtube.com/watch?v=s6i1Ou6R7vk&list=PLNmsVeXQZj7qI9vtiiU5bJBfbxqBailVM&index=42)
 
 Goal is to Programming a small tic tac toe project using most of the

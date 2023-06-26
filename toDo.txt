@@ -16,13 +16,13 @@ EIDIP_Stoff:
 
 - (dynamic) Polymorphism            Done!
 
-- Equals                -> Other Tutorial
+- Equals                            Done!
 
-- Casting               -> Other Tutorial
+- Casting                           Done!
 
-- InstanceOf            -> Other Tutorial
+- InstanceOf                        Done!
 
-- Lambda-Expressions    -> Other Tutorial
+- Lambda-Expressions                Done!
 
 + super                             Done!
 
@@ -35,3 +35,6 @@ EIDIP_Stoff:
 + Grundlagen_OO                     Done!       (Objects + Constructors)
 
 + toString                          Done!
+
+
+Most Resources Used: YouTube: The Morpheus Tutorials, BroCode, AlexLee, Coding with John.
