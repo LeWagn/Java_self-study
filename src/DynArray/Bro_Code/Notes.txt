@@ -1,0 +1,14 @@
+//Video Reference: https://www.youtube.com/watch?v=CBYHwZcbD-s  => Portion Dynamic Array & LinkedLists vs Dynamic Arrays.
+
+Dynamic Array = ArrayList (Java)
+
+Static Array: hat feste Kapazität, kann ich nicht ändern.
+    Access: O(1), Suche: O(n).
+    Nachteil:
+    Fixed capacity.
+
+Dynamic Array: creates new Array when capacity is reached. Growth factor usually between 1.5 and 2*.
+    Vorteil: Random Access: O(1); Easy to insert/delete at the end.
+    NAchteil: Wastes more memory, Shifting: O(n), Expanding/SHrinking O(n).
+
+Accessing an Element from an Arraylist is always faster than from a LinkedList bc we have Random access and don't have to traverse form one end. 
