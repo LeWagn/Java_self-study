@@ -1,0 +1,2 @@
+
+Recursion: Methode die sich Selbst aufruft. Dividing Problems into sub-Problems.

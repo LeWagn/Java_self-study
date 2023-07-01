@@ -1,0 +1,20 @@
+Recap on Big O Notation (Fast to Slow, considering large Data-Sets):
+
+O(1) = constant time
+=> Random Access of Element in an Array; Inserting at the beginning of a linkedList.
+
+O(log n) = logarithmic time
+=> Binary Search.
+
+O(n) = linear time
+=> Looping through elements in an array; searching throuhg a linkedList.
+
+O(n log n) = quasilinear time
+=> Quicksort; Mergesort; Heapsort;
+
+O(n²) = quadratic time
+=> Insertion Sort; Selection Sort; Bubblesort;
+
+O(n!) = factorial time
+=> Traveling Salesman Problem
+
