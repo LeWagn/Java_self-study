@@ -1,0 +1,32 @@
+siehe Prog-2-Neu Übung 5, Theorie.txt
+
+Außerdem:
+Datatypes:
+- Defines a domain of values. 
+- Defines Operations allowed on those values.
+
+Bsp.:
+int type: only allowes int values (no doubles etc.) and allows * + % / etc. ().
+=> float does not allow % operator.
+
+User-Defined Data Types:
+
+ADT:
+define operations on values using functions without specifying what's inisde the funtion and how
+those operations are performed.
+e.g. Stack: 
+consists of ELements of the same type arranged in a sequential order.
+Operations: push, pop, isEmpty, isFull...
+=> just specifying, not implementing. (Black Box that hides the inner structure and design of the Data Type from the User)
+
+Bsp.: Can implement Stack using Arrays or LinkedLists.
+
+Why do we need those "Skeletons"?
+Program that uses DS is called "client" program.
+The one that implmenets the DS is known as the "implementation".
+=> Client can use the DS Methods withouth knowing the implementation.
+=> If Implementation is changed from array to linkedList, the client program won't be affected and will function normally.
+
+Review: ADT provides abstraction.
+
+

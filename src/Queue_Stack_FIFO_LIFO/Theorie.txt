@@ -1,0 +1,87 @@
+
+Video TMT:
+Queue: hat 2 Operationen:
+
+FIFO ("Kassenschlange")
+push (können Element vorne einfügen)
+und pop (können das älteste Element rausnehmen)
+
+LIFO ("Stack")
+Das Element, was als letztes eingefügt worden ist, kommt als erstes raus.
+push (Fügen Element als vorderstes Element ein)
+pop (Nehmen vorderstes ELement wieder raus.)
+
+Laufzeit:
+- Zugriff, Suchen O(n)
+- Einfügen, Löschen O(1)
+
+Free Code Camp Video:
+
+
+
+Stack:
+
+LIFO-Stapel, hat einen Top Pointer, pop(); holt das oberste Element raus,
+push(T element); drück oben ein neues Element rein.
+Werden überall benutzt (Compiler, Text-Ediotrs, Tower of Hanoi, Depht-First-Search)
+
+Big O (nimmt LinkedList an):
+push O(1); pop O(1); peek O(1); searching O(n); Size O(1);
+
+Bsp.: [[{}]()] -> Check if Bracket-Sequence is valid.
+Push all opening brackets on the stack.
+for closing brackets: check if stack is empty, if not, pop() and check if value is equal
+to the closing bracket. check if stack is empty in the end again.
+
+Pseudo Code:
+Let S be a stackFor bracket in bracket_string:
+    rev = getReversedBracket(bracket)
+
+    IF isLeftBracket(bracket): S.push(bracket)
+    Else IF S.isEmpty() or S.pop() != rev:
+        return false //Invalid
+return S.isEmpty()  // Valid if S is empty.
+
+Stack using Singly LinkedLists: 
+push() insert before the head node.
+pop() remove head node and set it to null so it will be picked up by the Garbage Collector
+advance head pointer down to the next node.
+
+Source-Code of Queue using doubly-LinkedList: see Stack.java
+
+
+
+
+Queue:
+
+Linear Data-Structure that imitates a Queue. has a Front and a Back.
+Can Enqueue=Adding=Offering (insert) Elements to the back and 
+dequeue=polling (remove) Elements from the front.
+
+Used: to model real-world Queue, Web Server request management where you want first come first serve.
+Breadth First Search (BFS).
+
+Big O:
+enququ O(1); dequeue O(1); peeking O(1); contains O(n); removal O(n); isEmpty O(1);
+
+Bsp.: BFS using Queue
+Pseudo Code:
+Let Q be a QueueQ.enqueue(starting_node)
+starting_node.visisted = true;
+
+While Q is not empty Do
+    node = Q.dequeue();
+    For neighbour in neighbours(node):
+        If neighbour has not been visisted:
+            neighbour.visisted = true
+            Q.enqueue(neighbour)
+
+Implementation, usually Using (Dynamic)Arrays, Singly/Doubly LinkedLists
+For Singly Linked-Lists: 
+Push Tail-Node forward on enqueueing, Push Head-Node forward on dequeueing and set Element to null.
+
+Implementation using Doubly LinkdeLists: see Queue.java
+
+
+
+
