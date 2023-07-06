@@ -1,0 +1,7 @@
+Free-Code-Camp Binary-Trees and Binary Search Trees (BST):
+
+Insertion:
+
+Removal:
+
+Traversal:

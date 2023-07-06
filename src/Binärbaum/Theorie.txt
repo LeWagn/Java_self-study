@@ -1,0 +1,92 @@
+VLSG Video Blatt 6 (Binärbaum/Suchbaum):
+
+Knoten k ist ein Binärbaum.
+Sind Tl und Tr Binärbaume, so ist auch ein Knoten w mit einem linken Teilbaum Tl 
+und einem rechten Teilbaum Tr ein Binärbaum.    //Leere Bäume werden ignoriert.
+
+Knoten enthalten Daten(Werte). Baum ist eine DS.
+Implementierung ähnlich EVL, jedoch mit zwei Nachfolgern je Knoten.
+
+Bsp.:
+//Als arugmente an , unterhalb von welchem Knoten der neue Knoten hinzugefügt werden soll
+//und als 2. argument den einzufügenden Knoten.
+//Einordnung erfolgt hier zufällig => bei true links, bei false rechts.
+private void add(Node c, Node k){
+    Random rang = new Random();     //Zufall
+    if(rand.nextBoolean()){        //links einfügen
+        //Schaue, ob links platz ist oder ob es schon einen Teilbaum gibt.
+        //Gibt es keinen, wird teilbaum eingefügt.
+        if(c.lfet == null) c.left = k;
+        //Falls es bereits einen gibt, wird Methode erneut aufgerufen. Schaue wieder ob links oder rechts
+        //usw, bis unterhalb platz ist.
+        else add(c.left, k);    //rekursiver aufruf.
+    }
+    else{                           //rechts einfügen.
+        if(c.right == null) c.right = k;
+        else add(c.right, k);
+    }
+}
+
+Höhe eines Baumes:
+Ein Knoten = höhe h(t) = 1.
+Sind Tl und Tr linker und rechter Teilbaum von w, so hat w die Höhe
+h(w) = max{h(Tl), h(Tr)} +1 //h(w) ist um 1 höher als der höhere der beiden Teilbäume.
+leere Teilbäume = höhe 0(null).
+
+
+Suchbaum = ist das gleiche wie ein Binärbaum, nur dass Werte auf eine definierte Weise einsortiert werden.
+Hier: Binärbaum bei dem für alle Knoten k gilt:
+Für alle Werte v im linken Teilbaum Tl(k): v < v(k)
+Für alle Werte v im rechten Teilbaum Tr(k): v > v(k) 
+Bsp.: WurzelKnoten = 6, alle Werte links sind < 6, alle rechts > 6.
+
+=> Macht suche sehr einfach.
+
+//starten immer beim WurzelKnoten.
+Vorgehensweise zum Suchen eines Wertes n = 7: 
+Suche beginnt bei WurzelKnoten k = w.
+Dann rekursives Vorgehen:
+1) Falls v(k) == n: Suche erfolgreich; Abbruch.     //Wert = WurzelKnoten
+2) Falls v(k) > n -> k = Tl(k)                      //Wert < Wurzelknoten, suchen links weiter.
+3) Sont: k = Tr(k)                                  //Wert > Wurzelknoten, suchen rechts weiter.
+
+Einfügen: 
+Annahme: n ist noch nicht im Suchbaum.
+rekrusives Vorgehen wie bei Suche, bis leerer Teilbaum erreicht ist.
+Neuer Knoten k mit v(k) = n als neuer Teilbaum von k.
+
+Löschen: Knoten ohne Teilbaum.
+Suche des zu löschenden Knotens.
+Knoten löschen und Referenz im ELternknoten entfernen.
+
+Löschen: Knoten mit einem Teilbaum:
+Suche des zu löschenden Knotens.
+Knoten löschen und Referenz im Elternknoten auf Teilbaum setzen. //"Ziehen Wert nach oben"
+--> Egal wie groß der Teilbaum ist, aber muss einseitg sein (also nur ein Element ist unten mit dem zu löschenden verbunden)
+
+Löschen: Knoten mit zwei Teilbäumen:
+Suche des zu löschenden Knotens
+Ersetze Knoten durch Knoten mit höchstem Wert im linken Teilbaum.
+--> gehen vom zu löschenden Knoten in den linken Teilbaum und dort soweit nach rechts bis wir am Ende sind.
+--> Setzen dann dieses letzte rechte Element dorthin wo unser zu löschendes Element steht.
+
+
+Aufwand jeder Operation ist proportional zur höhe des Baums.
+Eine Vergleichsoperation pro Höhenschritt. (gilt für Einfügen/Löschen. Für Suchen ist das der Worst-Case)
+--> Interesse daran, dass Bäume möglichst niedrig sind.
+
+Drei verschiedene Arten des Durchlaufens:
+Bsp.: w= 6 Tl=4,1   Tr= 9, 7, 10    Höhe = 3.
+Preorder: Beginne mit Wurzelknoten, dann das gleiche mit dem linken Teilbaum, dann rechter Teilbaum.
+=> 6, 4, 1, 9, 7, 10
+Inorder: Aufsteigend (erst linker Teilbaum, dann Wurzelknoten, dann rechter Teilbaum)
+=> 1, 4, 6, 7, 9, 10
+Postorder: (linker Teilbaum, rechter Teilbaum, Wurzelknoten)
+=> 1, 4, 7, 10, 9, 6
+
+=> Sollten wissen, wie wir pre-in-und post-order anwenden können wenn ein Teilbaum vorgegeben ist.
+
+
+Suchaufwand von Bäumen:
+am Besten: Balancierter Baum ("volle Belegung")
+am schlechtesten: Linearer Baum (höhe = Anzahl Elemente).
