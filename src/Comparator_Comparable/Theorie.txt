@@ -1,0 +1,3 @@
+
+
+Comparator = Interface, in which you can use your own order for sorting (different from the natural order of comparable)

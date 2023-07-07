@@ -1,2 +1,26 @@
 
 Recursion: Methode die sich Selbst aufruft. Dividing Problems into sub-Problems.
+
+Solves a main problem by using the solution of a simpler sub-problem of the same type.
+
+Function Calls itself.
+
+Bsp.:
+5! = 5*4*3*2*1      =   5! = 5*4!       N! = N*(N-1)!       0! = 1
+fact(5) = 5 * fact(4)   = 120
+fact(4) = 4 * fact(3)   = 24
+fact(3) = 3 * fact(2)   = 6
+fact(2) = 2 * fact(1)   = 2
+fact(1) = 1 * fact(0)   = 1
+fact(0) = 1
+
+Code:
+public factClass{
+
+    public int fact(int i){
+        if(i == 0){
+            return 1;
+        }
+        return i * factorial(i-1);
+    }
+}
