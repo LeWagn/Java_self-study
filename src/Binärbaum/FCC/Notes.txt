@@ -1,7 +1,80 @@
 Free-Code-Camp Binary-Trees and Binary Search Trees (BST):
 
+Complexity of BST:
+
+Insert, Delete, Remove, Search:
+Average: O(log(n)).     Worst: O(n) => if we insert(1,2,3,4,5,6,7). Solution for that: AVL-Trees.
+
+BST is always invariant, meaning left subtree hast smaller Elements, right subtree has larger Elements.
+
+
 Insertion:
+Elements must be comparable so that we can order them inside the tree to be able to be added.
+When inserting, we want to compare its value to the value stored in the current node we're considering to decide one fo 4 cases:
+- Recurse down left subtree (< case)
+- Recurse down right subtree (> case)
+- Handle finding a duplicat value (= case)
+- Create a new node (found a null leaf)
+
+
 
 Removal:
+2 Step process:
+1) Find Element we want to remove
+2) Replace the node we want to remove with its successor (if any) to maintain the BST invariant.
+=> Remember: BST invariant: left subtree has smaller elements and right subtree has larger elements
+
+1) Find:
+-1 We hit a null node, at which point we know the value does not exist within our BST    (e.g. Looking for 17, we arrive at 16 and 16 has no children)
+-2 Comparator value equal to 0 (found)
+-3 Comparator value less than 0 (the value, if it exists, is in the left subtree)
+-4 Comparator value greater than 0 (the value, if it exists, is in the right subtree)
+
+2) Removal:
+-1 Node to remove is a leaf node (has no children, can just set null)
+-2 Node to remove has a right subtree but no left subtree
+-3 Node to remove has a left subtree but no right subtree
+-4 Node to remove has both a left and a right subtree
+
+2.1: just remove.
+2.2/2.3: successor to the removed node will be the root node of the subtree.
+2.4: successor can either be the largest value in the left subtree or the smallest value in the right subtree.
+            WHY? -> largest value in the left subtree is larger than everything in the left subtree and is smaller than everything in the right subtree.
+                    -> smalles value in the right subtree is smaller than everything in the right subtree and larger than everything in the left subtree.
+
+=> Either: go right and then as far left as possible, OR: go left and then as far right as possible.
+Copy that node and replace the removed node. Now remove the copied node using the same method (which will always be a case 1, 2 or 3 removal).
+
 
 Traversal:
+
+Preorder, Inorder & Postorder:          To execute one of the methods, we will call it again with other values = pushing those other values on the call stack.
+                                        whenever we "finish" a value, we remove it from the call-stack to achieve the goal of fulfilling our first method call.
+                                        only when that is done has the method finished. -> Recursion.
+                                        Example: inorder traverses the tree all the way down to the left, putting passed Elements on the call-stack,
+                                        then prints, "sees" that it cant go right or left and is thus taking that leftmost Element from the call stack 
+                                        and moves up one spot to complete that spots method call etc.       (In my own words).
+
+preorder(node):                 prints before the recursive calls!      
+    if node == null: return
+    print(node.value)
+    preorder(node.left)
+    preorder(node.right)
+
+inorder(node):                  prints between the recursive calls!     => increasing order.
+    if node == null: return
+    inorder(node.left)
+    print(node.value)
+    inorder(node.right)
+
+postorder(node):                prints after the recursive calls!
+    if node == null: return
+    postorder(node.left)
+    postorder(node.right)
+    print(node.value)
+
+level order traversal:          prints the layers one at the time using bfs (breadth first search)
+=> do a queue of the nodes left to explore. Begin with the root inside of the Queue and finish when the queue is empty.
+At each iteration we add the left child and the right child of the current node to our Queue and then remove the first Element of the Queue.
+
+Code: See BinarySearchTree.java
