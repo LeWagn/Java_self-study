@@ -36,7 +36,7 @@ public class CustomArrayList<T> implements Iterable<T> {
         public E next() {
             //this would just move up position by position.
             return this.internalList.get(this.indexPosition++);
-            
+
             //if I instead want to for example iterate through every square element, i could write:
             //E temp = this.internalList.get(this.indexPosition * this.indexPosition);
             //indexPosition++;

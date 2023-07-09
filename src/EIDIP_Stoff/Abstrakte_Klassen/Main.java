@@ -1,10 +1,11 @@
 package EIDIP_Stoff.Abstrakte_Klassen;
 
 public class Main {
-    
+
     //abstract =    abstract classes cannot be instantiated, but they can have a subclass
     //              abstract methods are declared without an implementation
     //              Adds a layer of security to the program.
+    //              Abstract classes aren't *required* to have abstract methods.
 
     //Creating an instance of Car:
     Car car = new Car();
