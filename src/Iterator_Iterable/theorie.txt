@@ -1,0 +1,20 @@
+
+Iterator allows you to iterate over a collection of elements.
+Usually obtained from a List or a Set.
+List<String> list = new ArrayList<>();
+Iterator<String> Iterator = list.iterator();
+
+=> Iteratoion Order depends on the specified order of the Datastructure.
+=> Should specify types <String> whenever possible. if Using generic type, Operation inside the loop has to be casted.
+=> If a collection is modified after an iteration, you have to create another iterator to iterate it again, otherwise you get an Error.
+    (Also can only modify the collection while inside an iteration loop by using the iterator.remove() method [instead of list.remove()]).
+
+===> Can implement Iterator interface yourself! (Make an Iterator class that implements the Iterator interface, Overriding the Methods hasNext and Next.
+                                                 then just instantiate it and use it like a normal iterator in your main class )
+
+
+Iterator and Iterable are BOTH interfaces.
+
+
+
+(=> Can also use ListIterator specifically for lists (more methods like hasPrevious).)
