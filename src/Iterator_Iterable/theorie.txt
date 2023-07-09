@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=mzpgeRuYduY
+https://www.youtube.com/watch?v=PmX3H73bqKI
+
 
 Iterator allows you to iterate over a collection of elements.
 Usually obtained from a List or a Set.
