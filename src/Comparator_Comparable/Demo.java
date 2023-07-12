@@ -28,7 +28,7 @@ class Student implements Comparable<Student>{
     }
 }
 
-public class Demo {
+public class Demo{
     public static void main(String[] args) {
 
 
@@ -63,5 +63,4 @@ public class Demo {
         for (Student s : studs)
                 System.out.println(s);        
     }
-    
 }
