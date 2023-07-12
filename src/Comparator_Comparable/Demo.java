@@ -38,7 +38,7 @@ public class Demo{
         //Because Integer implements Comparable. I have not in the Student class.
         //I have now using Comparable.
         //I can still override my Comparable logic using the Comparator.
-        Comparator<Student> com = new Comparator<Student>() {
+        Comparator<Student> com = new Comparator<Student>(){
             public int compare(Student i, Student j) {
                 if (i.age > j.age)
                     return 1;
